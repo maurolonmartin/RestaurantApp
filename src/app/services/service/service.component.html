@@ -1,0 +1,38 @@
+<mat-toolbar>
+    <span>{{service.form.controls['$key'].value?"Modificar registro":"Nuevo Registro"}}</span>
+    <span class="fill-remaining-space"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button>
+</mat-toolbar>
+<form  [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+    <mat-grid-list cols="1" rowHeight="300px"> 
+        <mat-grid-tile>
+            <div class="controles-container">
+                <input type="hidden" formControlName="$key">
+                <mat-form-field>
+                    <input formControlName="serviceNumber" matInput placeholder="Código de la orden">
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="restaurant" matInput placeholder="Restaurante">
+                </mat-form-field>
+                <div class="add-bottom-padding">
+                    <mat-radio-group formControlName="status">
+                        <mat-radio-button value="En preparación">En preparación</mat-radio-button>
+                        <mat-radio-button value="Para entrega">Para entrega</mat-radio-button>
+                        <mat-radio-button value="Entregado">Entregado</mat-radio-button>
+                        <mat-radio-button value="Orden cancelada">Orden cancelada</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <mat-form-field>
+                    <input formControlName="date" matInput [matDatepicker]="picker" placeholder="fecha de recepción">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" type="submit">Guardar</button>
+                    <button mat-raised-button color="warn">Borrar</button>
+                </div>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile></mat-grid-tile>
+    </mat-grid-list>
+</form>
