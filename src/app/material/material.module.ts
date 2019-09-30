@@ -11,34 +11,41 @@ import * as Material from "@angular/material";
     Material.MatGridListModule,
     Material.MatFormFieldModule,
     Material.MatInputModule,
-    Material.MatRadioModule,
-    Material.MatCheckboxModule,
+    Material.MatSelectModule,
     Material.MatDatepickerModule,
     Material.MatNativeDateModule,
     Material.MatButtonModule,
     Material.MatSnackBarModule,
     Material.MatTableModule,
     Material.MatIconModule,
+    Material.MatDialogModule,
+    Material.MatDividerModule,
+    Material.MatTooltipModule,
+    Material.MatButtonModule,
+    Material.MatRadioModule,
     Material.MatPaginatorModule,
-    Material.MatSortModule,
-    Material.MatDialogModule
+    Material.MatSortModule
+
   ],
   exports: [
     Material.MatToolbarModule,
     Material.MatGridListModule,
     Material.MatFormFieldModule,
     Material.MatInputModule,
-    Material.MatRadioModule,
-    Material.MatCheckboxModule,
+    Material.MatSelectModule,
     Material.MatDatepickerModule,
     Material.MatNativeDateModule,
     Material.MatButtonModule,
     Material.MatSnackBarModule,
     Material.MatTableModule,
     Material.MatIconModule,
+    Material.MatDialogModule,
+    Material.MatDividerModule,
+    Material.MatTooltipModule,
+    Material.MatButtonModule,
+    Material.MatRadioModule,
     Material.MatPaginatorModule,
-    Material.MatSortModule,
-    Material.MatDialogModule
+    Material.MatSortModule
   ]
 })
 export class MaterialModule { }
