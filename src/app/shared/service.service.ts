@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FormGroup, FormControl } from "@angular/forms";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { AngularFireDatabase, AngularFireList} from 'angularfire2/database';
 import { DatePipe } from '@angular/common';
 import * as _ from 'lodash';
@@ -16,7 +16,7 @@ export class ServiceService {
 
   form: FormGroup = new FormGroup({
     $key: new FormControl(null),
-    serviceNumber: new FormControl(''),
+    serviceNumber: new FormControl('',Validators.required),
     restaurant: new FormControl(''),
     status: new FormControl('1'),
     date: new FormControl('')

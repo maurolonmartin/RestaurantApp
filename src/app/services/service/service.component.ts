@@ -32,16 +32,18 @@ export class ServiceComponent implements OnInit {
   }
 
   onSubmit(){
-    if (!this.service.form.get('$key').value) {
-    this.service.insertService(this.service.form.value);
+    if(this.service.form.valid){
+      if (!this.service.form.get('$key').value) {
+        this.service.insertService(this.service.form.value);
+        }
+        else{
+          this.service.updateService(this.service.form.value);
+        }
+        this.service.form.reset();
+        this.service.initializeFormGroup();
+        this.notificationService.success('Se ha guardado el registro');
+        this.onClose();
     }
-    else{
-      this.service.updateService(this.service.form.value);
-    }
-    this.service.form.reset();
-    this.service.initializeFormGroup();
-    this.notificationService.success('Se ha guardado el registro');
-    this.onClose();
   }
 
   onClose(){

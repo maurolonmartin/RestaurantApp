@@ -9,7 +9,8 @@
             <div class="controles-container">
                 <input type="hidden" formControlName="$key">
                 <mat-form-field>
-                    <input formControlName="serviceNumber" matInput placeholder="Código de la orden">
+                    <input formControlName="serviceNumber" matInput placeholder="Código de la orden*">
+                    <mat-error>Por favor ingrese un código valido</mat-error>
                 </mat-form-field>
                 <mat-form-field>
                     <input formControlName="restaurant" matInput placeholder="Restaurante">
@@ -23,13 +24,12 @@
                     </mat-radio-group>
                 </div>
                 <mat-form-field>
-                    <input formControlName="date" matInput [matDatepicker]="picker" placeholder="fecha de recepción">
+                    <input formControlName="date" matInput [matDatepicker]="picker" placeholder="Fecha de recepción">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
                 <div class="button-row">
                     <button mat-raised-button color="primary" type="submit">Guardar</button>
-                    <button mat-raised-button color="warn">Borrar</button>
                 </div>
             </div>
         </mat-grid-tile>

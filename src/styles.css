@@ -1,5 +1,26 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+html,
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 90%;
+  font-family: 'Roboto', sans-serif, "Segoe UI",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  color: rgb(87, 87, 87);
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
 div.container{
     margin: 0px 40px;
 }
